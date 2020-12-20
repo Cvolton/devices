@@ -29,7 +29,7 @@ curl -d "api_key=your_api_key_here&version_tag=`uname -a`&packages_count=`pacman
 ### Windows Powershell
 ```powershell
 $buildtag = Get-ItemProperty -Path "Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion" -Name BuildLabEx
-$postParams = @{api_key='woihgowehgoiewhgoiewhgoiewhgwoiehgoiewhgoiwehgoiwhegoiwvbwoievboiwehvoiewhvoiewhgoiwhgoiwehgoiewhgoiewhgwoiehgoiewgwvnvoiNOwninoUINZngiuGE668eH17w6b416681r68BR6br';version_tag=$buildtag.BuildLabEx;packages_count='-1';id='1'}
+$postParams = @{api_key='your_api_key_here';version_tag=$buildtag.BuildLabEx;packages_count='-1';id='1'}
 Invoke-WebRequest -Uri http://127.0.0.1/devices/update_device.php -Method POST -Body $postParams
 ```
 
